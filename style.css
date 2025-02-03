@@ -1,0 +1,125 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+  }
+  
+  /* Navbar */
+  #navbar {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  #navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+  }
+  
+  #navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  #navbar ul li a:hover {
+    color: #ffdd57;
+    transform: translateY(-2px);
+  }
+  
+  /* Accordion */
+  .accordion {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  
+  .accordion-item {
+    background: white;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .accordion-item:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .accordion-header h2 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+  }
+  
+  .accordion-header i {
+    font-size: 20px;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .accordion-content {
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, padding 0.5s ease;
+    background: #f9f9f9;
+    border-radius: 0 0 10px 10px;
+  }
+  
+  .accordion-item.active .accordion-content {
+    padding: 20px;
+    max-height: 500px; /* Adjust based on content */
+  }
+  
+  .accordion-item.active .accordion-header {
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+  }
+  
+  .accordion-item.active .accordion-header i {
+    transform: rotate(180deg);
+    color: #ffdd57;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .accordion {
+      margin: 20px 10px;
+    }
+  
+    .accordion-header h2 {
+      font-size: 20px;
+    }
+  
+    #navbar ul {
+      gap: 15px;
+    }
+  
+    #navbar ul li a {
+      font-size: 16px;
+    }
+  }
